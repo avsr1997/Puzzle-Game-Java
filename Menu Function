@@ -1,7 +1,6 @@
 public void menu()
     {
         mbar=new JMenuBar();
-        
         if(b==true)
         {
             x4.setJMenuBar(mbar);
@@ -24,6 +23,15 @@ public void menu()
         tools=new JMenu("Tools");
         mbar.add(tools);
         
+        change_picture=new JMenu("Change Picture");
+        tools.add(change_picture);
+        sm1=new JMenuItem("Easy");
+        sm2=new JMenuItem("Medium");
+        sm3=new JMenuItem("Legendary");
+        change_picture.add(sm1);
+        change_picture.add(sm2);
+        change_picture.add(sm3);
+
         about=new JMenu("About");
         mbar.add(about);
         
@@ -34,30 +42,22 @@ public void menu()
         exit=new JMenuItem("Exit");
         file.add(exit);
         
-        easy=new JMenuItem("Easy");
-        level.add(easy);
-        medium=new JMenuItem("Medium");
-        level.add(medium);
-        legendry=new JMenuItem("Legendry");
-        level.add(legendry);
-        
-        enter_cheat=new JMenuItem("Cheat Code");
-        tools.add(enter_cheat);
-        
+        change_level=new JMenuItem("Change Level");
+        level.add(change_level);
+
         aboutgame=new JMenuItem("About Game");
         about.add(aboutgame);
                 
         aboutdeveloper=new JMenuItem("About Developer");
         about.add(aboutdeveloper);
         
-        
         newgame.addActionListener(this);
         playagain.addActionListener(this);
         exit.addActionListener(this);
-        easy.addActionListener(this);
-        medium.addActionListener(this);
-        legendry.addActionListener(this);
-        enter_cheat.addActionListener(this);
+        change_level.addActionListener(this);
+        sm1.addActionListener(this);
+        sm2.addActionListener(this);
+        sm3.addActionListener(this);
         aboutgame.addActionListener(this);
         aboutdeveloper.addActionListener(this);
     }
