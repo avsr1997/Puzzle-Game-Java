@@ -1,0 +1,68 @@
+public void second(int a)
+    {
+        x2=new JFrame();
+            
+        jb=new JProgressBar(0,100); 
+        jb.setBounds(10, 380, 450, 20);
+        jb.setValue(0);
+        jb.setStringPainted(true);
+        jb.setForeground(Color.RED);
+        x2.add(jb);
+            
+        Start=new JButton("Start");
+        Start.setBackground(Color.ORANGE);
+        Start.setBounds(130,405,100,50);
+        x2.add(Start);
+        
+        w2 = new JLabel(new ImageIcon(getClass().getClassLoader().getResource("background_frame_2.jpeg")));
+        w2.setBounds(0, 0, 500, 500);
+        x2.add(w2);
+            
+        x2.setTitle("Puzzle World");
+        x2.setResizable(false);
+        x2.setSize(500,500);
+        x2.setLayout(null);
+        x2.setLocationRelativeTo(null);
+        x2.setVisible(true);
+        x2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        x1.dispose();            
+            
+        Start.addActionListener(this);
+    }
+    
+    public void third(int a)
+    {
+        x3=new JFrame();
+            
+        Easy=new JButton("Easy");
+        Easy.setBackground(Color.ORANGE);
+        Easy.setBounds(150, 80, 200, 50);
+        x3.add(Easy);
+            
+        Medium=new JButton("Medium");
+        Medium.setBackground(Color.ORANGE);
+        Medium.setBounds(150, 180, 200, 50);
+        x3.add(Medium);
+            
+        Legendary=new JButton("Legendary");
+        Legendary.setBackground(Color.ORANGE);
+        Legendary.setBounds(150, 280, 200, 50);
+        x3.add(Legendary);
+        
+        w3 = new JLabel(new ImageIcon(getClass().getClassLoader().getResource("background_frame_2.jpeg")));
+        w3.setBounds(0, 0, 500, 500);
+        x3.add(w3);
+            
+        x3.setTitle("Puzzle World");
+        x3.setResizable(false);
+        x3.setSize(500,500);
+        x3.setLayout(null);
+        x3.setLocationRelativeTo(null);
+        x3.setVisible(true);
+        x3.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        x2.dispose();            
+            
+        Easy.addActionListener(this);
+        Medium.addActionListener(this);
+        Legendary.addActionListener(this);
+    }
