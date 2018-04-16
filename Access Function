@@ -1,0 +1,74 @@
+package puzzle_game;
+
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+
+public class Puzzle_Game implements ActionListener
+{
+    JLabel w1,w2,w3;
+    JButton l1,l2,l3;
+    JFrame x1,x2,x3,x4,x5,x6,x7,x8,x9;
+    JTextField tf1,tf2,tf3,tf4;
+    JProgressBar jb;
+    JButton sample1,sample2,sample3;
+    JButton b1,b2,b3,b4,b5,b6,b7,b8,b9,e1,e2,e3;
+    JButton c1,c2,c3,c4,c5,c6,c7,c8,c9,c10,c11,c12,c13,c14,c15,c16,m1,m2,m3;
+    JButton d1,d2,d3,d4,d5,d6,d7,d8,d9,d10,d11,d12,d13,d14,d15,d16,d17,d18,d19,d20,d21,d22,d23,d24,d25,h1,h2,h3; 
+    JButton Login,Start,Next,Easy,Medium,Legendary,Submit;
+    JMenuBar mbar;
+    JMenu file,level,tools,change_picture,about;
+    JMenuItem newgame,playagain,exit,change_level,sm1,sm2,sm3,aboutgame,aboutdeveloper;
+
+    Image icon;
+    Icon change;
+    Icon picture1,picture2,picture3;
+    Icon p1,p2,p3,p4,p5,p6,p7,p8,p9;
+    Icon q1,q2,q3,q4,q5,q6,q7,q8,q9,q10,q11,q12,q13,q14,q15,q16;
+    Icon r1,r2,r3,r4,r5,r6,r7,r8,r9,r10,r11,r12,r13,r14,r15,r16,r17,r18,r19,r20,r21,r22,r23,r24,r25;
+    
+    boolean b,c,d;
+    public static void main(String[] args) 
+    {
+        Puzzle_Game obj=new Puzzle_Game();
+        obj.first(0);
+    }
+    public void first(int a)
+    {
+        x1=new JFrame();
+
+        tf1=new JTextField(10);
+        tf1.setBounds(110,350, 40, 30);
+        x1.add(tf1);
+        
+        tf2=new JTextField(10);
+        tf2.setBounds(160, 350, 40, 30);
+        x1.add(tf2);
+        
+        tf3=new JTextField(10);
+        tf3.setBounds(210, 350, 40, 30);
+        x1.add(tf3);
+        
+        tf4=new JTextField(10);
+        tf4.setBounds(260, 350, 40, 30);
+        x1.add(tf4);
+       
+        Login=new JButton("LOGIN");
+        Login.setBackground(Color.ORANGE);
+        Login.setBounds(150, 400,100,50);
+        x1.add(Login);
+        
+        w1 = new JLabel(new ImageIcon(getClass().getClassLoader().getResource("background_frame_1.jpg")));
+        w1.setBounds(0, 0, 500, 500);
+        x1.add(w1);
+        
+        x1.setTitle("Puzzle World");
+        x1.setResizable(false);
+        x1.setSize(500,500);
+        x1.setLayout(null);
+        x1.setLocationRelativeTo(null);
+        x1.setVisible(true);
+        x1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        
+        Login.addActionListener(this);
+    }
