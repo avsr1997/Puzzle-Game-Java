@@ -1,0 +1,80 @@
+Timer t=new Timer(1,new ActionListener() 
+    {
+        @Override
+        public void actionPerformed(ActionEvent ae) 
+        {
+            int i=0;
+            if(jb.getValue()<100)
+            {
+                jb.setValue(jb.getValue()+1);
+            }
+            else if(i==0)
+            {
+                t.stop();
+                Next=new JButton("Next");
+                Next.setBackground(Color.ORANGE);
+                Next.setBounds(230,405,100,50);
+                x2.add(Next);
+                new_method();
+            }
+        }
+    });
+    
+    public void new_method()
+    {
+         Next.addActionListener(this);
+    }
+    
+    Timer t1=new Timer(1000,new ActionListener() 
+    {
+        @Override 
+        public void actionPerformed(ActionEvent e) 
+        {
+            int i=Integer.parseInt(l1.getText());
+            if(i<=100&&i>0)
+            {
+                l1.setText(Integer.toString(i-1));
+            }
+            else if(i==0)
+            {
+                t1.stop();
+                JOptionPane.showMessageDialog(x4, "Time Over");
+            }
+        }
+    });
+    
+    Timer t2=new Timer(1500,new ActionListener() 
+    {
+        @Override 
+        public void actionPerformed(ActionEvent e) 
+        {
+            int i=Integer.parseInt(l2.getText());
+            if(i<=150&&i>0)
+            {
+                l2.setText(Integer.toString(i-1));
+            }
+            else if(i==0)
+            {
+                t2.stop();
+                JOptionPane.showMessageDialog(x5, "Time Over");
+            }
+        }
+    });
+    
+    Timer t3=new Timer(2000,new ActionListener() 
+    {
+        @Override 
+        public void actionPerformed(ActionEvent e) 
+        {
+            int i=Integer.parseInt(l3.getText());
+            if(i<=200&&i>0)
+            {
+                l3.setText(Integer.toString(i-1));
+            }
+            else if(i==0)
+            {
+                t3.stop();
+                JOptionPane.showMessageDialog(x6, "Time Over");
+            }
+        }
+    });
