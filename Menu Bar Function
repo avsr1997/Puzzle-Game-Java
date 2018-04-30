@@ -1,3 +1,4 @@
+The method shown below meets all the functional requirements of the application.
 public void menu()
     {
         mbar=new JMenuBar();
