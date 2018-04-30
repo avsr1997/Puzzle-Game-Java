@@ -1,3 +1,4 @@
+// The second and third frame contains the loading process of the game then it redirects to level selection.
 public void second(int a)
     {
         x2=new JFrame();
